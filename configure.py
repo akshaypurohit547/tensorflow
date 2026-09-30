@@ -15,6 +15,17 @@
 """configure script to get build parameters from user."""
 
 
+import argparse
+import errno
+import json
+import os
+import platform
+import re
+import shutil
+import subprocess
+import sys
+
+
 _DEFAULT_CUDA_COMPUTE_CAPABILITIES = '3.5,7.0'
 
 _SUPPORTED_ANDROID_NDK_VERSIONS = [19, 20, 21, 25]
